@@ -1,0 +1,39 @@
+<div *ngIf="showSideBar">
+    <ion-menu [content]="content" class="side-menu">
+        <ion-content>
+            <div class="sp-cover menu-header">
+                <div id="sp-cover-photo" class="cover-photo" [style.background-image]="'url(' + provider.background + ')'">
+                    <div class="cover-overlay"></div>
+                </div>
+                <div class="sp-info" padding>
+                    <div class="sp-name row">{{provider.name}}</div>
+                    <div class="sp-address">{{provider.address}}</div>
+                </div>
+            </div>
+            <ion-grid padding class="menu-content">
+                <ion-row class="menu-item" *ngFor="let menuItem of menuItems" [ngClass]="{'no-margin-top': menuItem.isNewSection, 'active-menu': menuItem.isActive}">
+                    <div class="section-separator" *ngIf="menuItem.isNewSection"></div>
+                    <ion-col menuClose col-12 (click)="openPage(menuItem.page)">
+                        {{menuItem.title | translate}}
+                    </ion-col>
+                </ion-row>
+                <!-- Manualy generated menu -->
+                <ion-row class="menu-item no-margin-top">
+                    <div class="section-separator"></div>
+                    <ion-col menuClose col-12>
+                        <a href="tel:+84934980804" class="menu-item-contact">
+                            {{ 'contact' | translate }} Supporter
+                            <br /> (+84)934 980 804
+                        </a>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="menu-item">
+                    <ion-col menuClose col-12 (click)="logout()">
+                        {{ 'logout' | translate}}
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-menu>
+</div>
+<ion-nav [root]="rootPage" #content></ion-nav>

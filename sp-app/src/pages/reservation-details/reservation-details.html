@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'reservation-info' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="request-details">
+  <div class="request-details-section box-shadow">
+    <ion-row class="request-row">
+      <div>
+        <span class="title-book">{{ 'customer-name' | translate }}</span>&nbsp;:&nbsp;{{ item.customer.name }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row" *ngIf="item.telephone && (item.telephone != '')" >
+      <div>
+        <span class="title-book">{{ 'phone-number' | translate }}</span>&nbsp;:&nbsp;{{ item.telephone }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row">
+      <div>
+        <span class="title-book">{{ 'quantity' | translate }}</span>&nbsp;:&nbsp;{{ item.numCus }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row">
+      <div>
+        <span class="title-book">{{ 'time' | translate }}</span>&nbsp;:&nbsp;{{ item.dateTime }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row" *ngIf="item.conditions !== ''">
+      <div>
+        <span class="title-book">{{ 'note' | translate }}</span>&nbsp;:&nbsp;{{ item.conditions }}
+      </div>
+    </ion-row>
+  </div>
+  
+  <div class="clear-footer"></div>
+  <ion-row *ngIf="isSubmitted(item)"  class="bottom-action-buttons text-center" no-padding>
+    <ion-col col-6 no-padding class="button-wrapper bg-green-light" (click)="accept($event, item)">
+      <div class="bottom-button">
+          {{ 'accept' | translate }}
+      </div>
+    </ion-col>
+    <ion-col col-6 no-padding class="button-wrapper bg-red" (click)="decline($event, item)">
+      <div class="bottom-button" color="danger">
+          {{ 'refuse' | translate }}
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

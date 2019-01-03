@@ -1,0 +1,552 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$color-green-dark: #006837;
+$color-green-light: #2ab74e;
+$color-gray-dark: #57666b;
+$color-gray-light: #e4e4e4;
+$color-gray-lighter: #fafbfc;
+$color-orange: #ffc107;
+$color-red: #f44336;
+body {
+  font-family: 'Roboto', sans-serif;
+  [no-padding-left] {
+    padding-left: 0;
+  }
+  [no-padding-right] {
+    padding-right: 0;
+  }
+  .content-md {
+    color: $color-gray-dark;
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.color-green-dark {
+  color: $color-green-dark;
+}
+
+.color-orange {
+  color: $color-orange;
+}
+
+.bg-green-dark {
+  background-color: $color-green-dark;
+}
+
+.bg-green-light {
+  background-color: $color-green-light;
+  color: white;
+}
+
+.bg-gray-dark {
+  background-color: $color-gray-dark;
+  color: white;
+}
+
+.bg-orange {
+  background-color: $color-orange;
+  color: white;
+}
+
+.bg-red {
+  background-color: $color-red;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.btn {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.btn-bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 9px 15px;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.btn-circle {
+  border-radius: 50%;
+}
+
+.margin-row {
+  margin: 8px 0;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 0 10px #e0e0e0;
+  box-shadow: 0 0 10px #e0e0e0;
+}
+
+.clear-footer {
+  width: 100%;
+  height: 50px;
+}
+
+.segment-button {
+  color: $color-green-dark !important;
+  &.segment-activated {
+    border-color: $color-green-dark !important;
+  }
+}
+
+.tab-button[aria-selected=true],
+.tab-button[aria-selected=true] .tab-button-icon {
+  color: $color-green-dark !important;
+}
+
+ion-header ion-icon.back-button-icon.icon,
+ion-header span.back-button-text.back-button-text-ios {
+  position: absolute;
+  z-index: 1;
+}
+
+.back-button.show-back-button {
+  display: inline-block;
+  z-index: 1;
+}
+
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 0;
+}
+
+ion-navbar {
+  .toolbar-background {
+    background-color: $color-green-dark;
+  }
+  .toolbar-title {
+    color: white;
+  }
+  button {
+    color: white !important;
+  }
+}
+
+.side-menu .menu-inner {
+  background: $color-gray-lighter;
+}
+
+.menu-content {
+  background: transparent;
+  color: $color-gray-dark;
+}
+
+ion-input[type='text'],
+ion-input[type='number'] {
+  border-bottom: .55px solid $color-gray-light;
+  letter-spacing: 1.05px;
+}
+
+.side-menu {
+  .row {
+    margin: 5px 0;
+  }
+  .sp-cover {
+    position: relative;
+    color: white;
+    .sp-info {
+      position: absolute;
+      bottom: 0;
+      .sp-avatar {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        border-radius: 3px;
+      }
+    }
+    .cover-photo {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      .cover-overlay {
+        height: 100%;
+        background: linear-gradient(transparent, transparent, #000000);
+      }
+    }
+  }
+  .menu-item {
+    &:first-child {
+      margin-top: 0px !important;
+    }
+    &.no-margin-top {
+      margin-top: 0px !important;
+    }
+    &.active-menu {
+      color: $color-green-light !important;
+    }
+    .section-separator {
+      height: 1px;
+      width: 100%;
+      background: $color-gray-light;
+      margin-bottom: 10px;
+    }
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+ion-content[padding] .scroll-content {
+  padding: 1em !important;
+}
+
+.scroll-content {
+  background: $color-gray-lighter;
+}
+
+.rectangle-row {
+  margin-bottom: 1em;
+  [col-left] {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+  [col-right] {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  .rectangle-item {
+    background: white;
+    padding: .5em;
+    -webkit-box-shadow: 0 0 10px #e0e0e0;
+    box-shadow: 0 0 10px #e0e0e0;
+    position: relative;
+    color: $color-gray-dark;
+    &.rectangle-left {
+      margin-right: .5em;
+    }
+    &.rectangle-right {
+      margin-left: .5em;
+    }
+    .rectangle-item-value {
+      padding: 1.5em .5em;
+      text-align: center;
+      width: 100%;
+      font-size: 2em;
+    }
+    .rectangle-item-title {
+      position: absolute;
+      top: .5em;
+    }
+  }
+}
+
+.full-thumbnail {
+  background: #fff;
+  padding-top: 12px;
+}
+
+.full-thumbnail label {
+  margin: 0 16px;
+  color: #488aff;
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+}
+
+.file-wrapper {
+  width: 100%;
+  height: 10em;
+  position: relative;
+  overflow: hidden;
+  background-color: #ccc; // background-image: url('/assets/imgs/no-image-menu.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.file-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.file-wrapper::after {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  content: '\f382';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  pointer-events: none;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.fixed-bottom-left {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn {
+  padding: 6px 15px 12px;
+  background: #006837;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 0;
+}
+
+.btn-small {
+  font-size: 1.5rem;
+}
+
+.btn-md {
+  font-size: 1.5rem !important;
+  padding: 1em !important;
+}
+
+.btn-green {
+  background: #006837;
+}
+
+.btn-orange {
+  background: $color-orange;
+}
+
+.btn-red {
+  background: #f46b42;
+}
+
+.btn.btn-circle {
+  border-radius: 50%;
+}
+
+.btn-half {
+  width: 50%;
+}
+
+.btn-60p {
+  width: 60%;
+}
+
+.btn-40p {
+  width: 40%;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 1px 10px 1px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 1px 1px 10px 1px #ccc;
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 1px 10px 1px #ccc;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.hidden {
+  display: none;
+}
+
+.field-error {
+  color: red;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+button[disabled],
+[ion-button][disabled] {
+  background: #ccc;
+  opacity: 1;
+}
+
+.menu-item-contact {
+  text-decoration: none;
+  color: inherit;
+}
+
+.required {
+  color: red;
+}
+
+// IOS - SPECIFIC STYLE
+.platform-ios {
+  input.text-input-ios {
+    padding: 0 1em;
+  }
+  .segment-ios {
+    margin: 10px 0;
+    .segment-button {
+      color: $color-green-dark;
+      border-color: $color-green-dark !important;
+      border-radius: 0 !important;
+      &.segment-activated {
+        color: white !important;
+        background-color: $color-green-dark;
+      }
+    }
+  }
+}
+
+.plus-circle-button {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  bottom: 1.3em;
+  right: 1.3em;
+  background: #006837;
+  color: white;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  display: table;
+  padding: 10px;
+  z-index: 99;
+
+  .fas {
+    font-size: 1.8em;
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.cover-image-wrapper {
+  padding: 0 5px 0 0;
+  .cover-image {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    border-radius: 50%;
+    background-color: $color-gray-dark;
+    background-position: center center;
+  }
+}
+
+.back-button-ios {
+  padding: 0 15px;
+}
+
+
+//handle ionic-image-view bug
+image-viewer.ion-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    opacity: 1;
+
+    ion-navbar {
+        &.toolbar .toolbar-background {
+            background-color: transparent;
+        }
+
+        &.toolbar.toolbar-ios {
+            padding-top: calc(20px + 4px);
+        }
+
+        .bar-button-default {
+            color: white;
+        }
+    }
+
+    .backdrop {
+        will-change: opacity;
+    }
+
+    .image-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        pointer-events: none;
+        margin-top: 56px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .image {
+        will-change: transform;
+    }
+
+    img {
+        display: block;
+        pointer-events: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        margin: 0 auto;
+    }
+}
+
+.sub-info{
+  color: #cccccc;
+}
+
+.title-book{
+  font-weight: bold;
+}

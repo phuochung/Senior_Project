@@ -1,0 +1,79 @@
+<%
+    Number.prototype.formatSpecificedCurrency = function(c, d, t){
+        var n = this, 
+        c = isNaN(c = Math.abs(c)) ? 2 : c, 
+        d = d == undefined ? "." : d, 
+        t = t == undefined ? "," : t, 
+        s = n < 0 ? "-" : "", 
+        i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+        j = (j = i.length) > 3 ? j % 3 : 0;
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    };
+
+    Number.prototype.formatCurrency = function(currency){
+        var number = this;
+        if (number){
+            switch(currency){
+                case 'VND':
+                    return number.toLocaleString('vi-VI', { style: 'currency', currency: 'VND' });
+                case 'USD':
+                    return number.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                default:
+                    return number;
+            }
+        }  
+        return 0;
+    };
+
+    Number.prototype.fromUSDtoVND = function(rate){
+        var number = this;
+        var result = Number((Math.round(Number(number) * rate/ 1000)).toFixed(2)) * 1000;
+        return result;
+    }
+
+    Number.prototype.fromVNDtoUnknown = function(currency, rate){
+        var number = this;
+        if (number){
+            switch(currency){
+                case 'VND':
+                    return number;
+                case 'USD':
+                    number = number / rate;
+                    return number;
+                default:
+                    return number;
+            }
+        }  
+        return 0;
+    }
+    
+    Number.prototype.toDateString = function() {
+        let date = (new Date(this * 1000));
+        var d = date.getDate();
+        if (d < 10) {
+            d = '0' + d;
+        }
+        var m = date.getMonth() + 1; //Months are zero based
+        if (m < 10) {
+            m = '0' + m;
+        }
+        let y = date.getFullYear();
+        let dateAsString = [d, m, y].join('.');
+    
+        return dateAsString;
+    };
+    
+    Array.prototype.getPriceByCurrency = function(currency){
+        var price = this;
+        var item  = price.find(p=> p.currency && p.currency.code == currency);
+        if (item) return item.value.formatCurrency(currency);
+        return (0).formatCurrency(currency);
+    }
+
+    Array.prototype.getPriceByCurrencyWithoutFormat = function(currency){
+        var price = this;
+        var item  = price.find(p=> p.currency && p.currency.code == currency);
+        if (item) return item.value;
+        return 0;
+    }
+%>

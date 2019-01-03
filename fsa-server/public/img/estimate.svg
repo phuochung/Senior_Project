@@ -1,0 +1,12 @@
+<svg width="170" height="90" viewBox="0 0 17 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>estimate</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1368 383)">
+<g id="estimate">
+<use xlink:href="#path0_fill" transform="matrix(-1 0 0 1 1385 -383)" fill="#454545"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 6.07143 0L 3.71875 2.17969L 7.28571 5.625L 11.346 1.86328L 17 9L 11.346 4.5L 7.28571 8.4375L 2.31473 3.48047L 0 5.625L 0 0L 6.07143 0Z"/>
+</defs>
+</svg>

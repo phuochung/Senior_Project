@@ -1,0 +1,113 @@
+body {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.green-text {
+    color: #71af00;
+}
+
+.padding-t-0 {
+    padding-top: 0;
+}
+
+.view-header {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    font-family: 'Lora', serif;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    .background {
+        width: 100%;
+        height: 100%;
+        img {
+            height: 100%;
+            width: auto;
+            overflow: hidden;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 15px;
+        h3.title {
+            margin: 0;
+            font-size: 1.4rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: lighter;
+            a {
+                color: #fff;
+            }
+            i.material-icons {
+                position: relative;
+                top: 2px;
+            }
+            span.p-address {
+                text-transform: none;
+            }
+        }
+    }
+    &.no-bg {
+        background-image: url('../img/background-gift.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+.view-content {
+    padding: 0 15px;
+    font-family: 'Lora', serif;
+    .btn-buy{
+        background: #71af00;
+    }
+    .date {
+        font-weight: bold;
+        color: #71af00;
+    }
+    .description {
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 1.6rem !important;
+        margin: 30px 0 !important;
+        line-height: 100% !important;
+        text-transform: none !important;
+    }
+    h5 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #71af00;
+    }
+    .row {
+        margin-bottom: 0;
+        .material-icons {
+            font-size: 18px;
+        }
+    }
+    .material-icons {
+        position: relative;
+        top: 3px;
+    }
+}

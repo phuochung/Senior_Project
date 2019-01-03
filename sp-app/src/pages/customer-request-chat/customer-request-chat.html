@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Danh sách yêu cầu chat với admin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-row padding class="box-shadow margin-row bg-white" *ngFor="let item of items">
+      <ion-col col-12 class="item-information">
+        <p>{{ item.name }}</p>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="!isLoading && items.length == 0">
+      <p class="text-center">{{ 'no-data' | translate }}</p>
+    </div>
+  </ion-list>
+  <div class="lazy-loading text-center">
+    <h4 *ngIf="isLoading">{{ 'loading' | translate }}...</h4>
+  </div>
+</ion-content>

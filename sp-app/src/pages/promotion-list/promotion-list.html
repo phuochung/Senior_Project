@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ 'promotions' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-row padding class="box-shadow margin-row bg-white" *ngFor="let promotion of promotions" (click)="goToPromotionCreatePage(promotion._id)" >
+    <ion-col col-2 class="cover-image-wrapper">
+      <div class="cover-image" [style.backgroundImage]="'url(' + promotionImgUrl + promotion.imageName + ')'">
+      </div>
+    </ion-col>
+    <ion-col col-7 class="promotion-details">
+      <div class="text-nowrap text-bold">{{promotion.title}}</div>
+      <div>
+        <span *ngIf="promotion.dateFrom">{{promotion.dateFrom| date:'dd/MM/yyyy': 'UTC'}}</span>
+        <span *ngIf="!promotion.dateFrom">{{promotion.dateBegin}}</span>-
+        <span *ngIf="promotion.dateTo">{{promotion.dateTo| date:'dd/MM/yyyy': 'UTC'}}</span>
+        <span *ngIf="!promotion.dateTo">{{promotion.dateEnd}}</span>
+      </div>
+    </ion-col>
+    <ion-col col-3 class="promotion-status text-right">
+      <span class="item-status {{promotionHelper.getPromotionStatusBgCss(promotion)}}">
+        {{ promotionHelper.getPromotionStatusText(promotion) | translate }}
+      </span>
+    </ion-col>
+  </ion-row>
+  <div *ngIf="!isLoading && promotions.length == 0">
+    <p class="text-center">{{ 'no-data' | translate }}.</p>
+  </div>
+  <div class="lazy-loading text-center">
+    <a *ngIf="criteria.currentPage < criteria.totalPage && !isLoading" (click)="loadMore()" class="bg-green-light" ion-button>
+        {{ 'load-more' | translate }}
+    </a>
+    <h4 *ngIf="isLoading" class="text-center">{{ 'loading' | translate }}...</h4>
+  </div>  
+    <label class="plus-circle-button" (click)="goToPromotionCreatePage()"><i class="fas fa-plus"></i></label>  
+</ion-content>

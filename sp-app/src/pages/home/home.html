@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ 'home' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row class="rectangle-row">
+    <ion-col col-12 col-right>
+      <div class="rectangle-item" (click)="openPageAsRoot(requestListPage)">
+        <div class="rectangle-item-value">{{deliveryAndReservationCount || '...'}}</div>
+        <span class="rectangle-item-title">{{ 'delivery-reservation' | translate }}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="rectangle-row">
+    <ion-col col-6 col-right>
+      <div class="rectangle-item rectangle-left" (click)="openPageAsRoot(promotionListPage)">
+        <div class="rectangle-item-value">{{promotionsCount}}</div>
+        <span class="rectangle-item-title">{{ 'promotion' | translate }}</span>
+      </div>
+    </ion-col>
+    <ion-col col-6 col-left>
+      <div class="rectangle-item rectangle-left" (click)="openPageAsRoot(customerRequestChat)">
+        <div class="rectangle-item-value">{{customerRequestingChatCount}}</div>
+        <span class="rectangle-item-title">Yêu cầu chat với admin</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="rectangle-row">
+    <ion-col col-6 col-right>
+      <div class="rectangle-item rectangle-left" (click)="openPageAsRoot(menuListPage)">
+        <div class="rectangle-item-value">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <span class="rectangle-item-title">{{ 'menu' | translate }}</span>
+      </div>
+    </ion-col>
+    <ion-col col-6 col-left>
+      <div class="rectangle-item rectangle-left" (click)="openPageAsRoot(faqListPage)">
+        <div class="rectangle-item-value">
+          <i class="fas fa-comments"></i>
+        </div>
+        <span class="rectangle-item-title">{{ 'faqs' | translate }}</span>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

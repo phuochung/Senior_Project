@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ 'menu' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="statusFilter" color="primary" (ionChange)="bindMenu(statusFilter)">
+    <ion-segment-button value="food">
+      {{ 'food' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="drink">
+      {{ 'drink' | translate }}
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list>
+    <ion-row padding class="box-shadow margin-row bg-white" *ngFor="let item of items" (click)="goToMenuCreatePage(item._id)" >
+      <ion-col col-3 class="cover-image-wrapper">
+        <div class="cover-image" [style.backgroundImage]="'url(' + menuImgUrl + item.thumbnail + ')'">
+      </div>
+      </ion-col>
+      <ion-col col-9 class="item-information">
+        <p>
+          <b>{{ item.name }}</b>
+        </p>
+        <p>
+          {{ currencyHelper.getFormattedPrice(item.price) }}
+        </p>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="!isLoading && items.length == 0">
+      <p class="text-center">{{ 'no-data' | translate }}</p>
+    </div>
+  </ion-list>
+  <div class="lazy-loading text-center">
+    <a *ngIf="criteria.currentPage < criteria.totalPage && !isLoading" (click)="loadMore()" class="bg-green-light" ion-button>
+      {{ 'load-more' | translate }}
+    </a>
+    <h4 *ngIf="isLoading">{{ 'loading' | translate }}...</h4>
+  </div>
+  <div class="slider-container">
+    <label class="plus-circle-button" (click)="goToMenuCreatePage()">
+      <i class="fas fa-plus"></i>
+    </label>
+  </div>
+</ion-content>

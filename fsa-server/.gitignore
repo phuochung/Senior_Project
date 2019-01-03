@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+.DS_Store
+public/.DS_Store
+npm-debug.log
+
+yarn.lock
+ft_*
+intent.json
+keySecret.config.js
+migrate/
+public/img/upload/
+package-lock.json
+
+.vscode/
+

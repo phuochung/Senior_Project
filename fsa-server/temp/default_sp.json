@@ -1,0 +1,416 @@
+{
+    "criterion" : [ 
+        {
+            "name" : "Food",
+            "rankQuestion" : "Thực đơn và đồ ăn của chúng tôi tốt chứ nhỉ?",
+            "rankQuestion_en" : "How is our Food & Menu?",
+            "weightage" : 0.5,
+            "iconName" : "food.png",
+            "active" : true,
+            "isUpload" : false,
+            "id" : 1,
+            "answers" : [ 
+                {
+                    "content" : "Dễ nhìn, dễ tìm, đẹp mắt",
+                    "content_en" : "Attractive, Delicious, Tasty!",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Tương đối tốt, cần phát triển thêm.",
+                    "content_en" : "Acceptable,  not attractive.",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Awful! Because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Awful! Because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Thực đơn ít món, không đa dạng",
+                                "content_en" : "Not a lot of dishes on the menu",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Đồ ăn dở, cần thay đổi khẩu vị",
+                                "content_en" : "Poor presentation of dishes",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "name" : "Service",
+            "rankQuestion" : "Cách phục vụ của chúng tôi như thế nào?",
+            "rankQuestion_en" : "How about our service quality ☺?",
+            "weightage" : 0.15,
+            "iconName" : "service.png",
+            "active" : true,
+            "isUpload" : false,
+            "id" : 6,
+            "answers" : [ 
+                {
+                    "content" : "Nhân viên thân thiện, chuyên nghiệp.",
+                    "content_en" : "Professional, Friendly ",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Nhân viên chuyên nghiệp nhưng chưa thân thiện.",
+                    "content_en" : "Professional, not friendly",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Unacceptable, because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Unacceptable, because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Thái độ không tốt.",
+                                "content_en" : "Bad staff attitude",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Hành vi cư xử không chuẩn mực.",
+                                "content_en" : "Bad customer service",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "name" : "Price",
+            "rankQuestion" : "Giá cả của chúng tôi hợp lý chứ?",
+            "rankQuestion_en" : "How about our pricing?",
+            "weightage" : 0.15,
+            "iconName" : "price.png",
+            "active" : true,
+            "isUpload" : false,
+            "id" : 2,
+            "answers" : [ 
+                {
+                    "content" : "Hấp dẫn.",
+                    "content_en" : "Attractive price",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Hợp lý",
+                    "content_en" : "Resonable price",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Unacceptable, because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Unacceptable, because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Quá đắt so với chất lượng đồ ăn.",
+                                "content_en" : "Too expensive for food quality",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Quá đắt so với số lượng đồ ăn.",
+                                "content_en" : "Too expensive for food quantity",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "name" : "Atmosphere",
+            "rankQuestion" : "Không gian nhà hàng của chúng tôi như thế nào?",
+            "rankQuestion_en" : "How about our atmosphere?",
+            "weightage" : 0.067,
+            "iconName" : "atmosphere.png",
+            "active" : true,
+            "isUpload" : false,
+            "id" : 3,
+            "answers" : [ 
+                {
+                    "content" : "Thoải mái, thoáng mát.",
+                    "content_en" : "Comfortable",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Chấp nhận được.",
+                    "content_en" : "Acceptable",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Unacceptable, because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Unacceptable, because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Quá ồn ào, nóng nực.",
+                                "content_en" : "Too noisy, too hot",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Quá bẩn.",
+                                "content_en" : "Too dirty",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "name" : "Timing",
+            "weightage" : 0.067,
+            "rankQuestion" : "Thời gian phục vụ của chúng tôi có làm bạn hài lòng không?",
+            "rankQuestion_en" : "How about our serving time?",
+            "iconName" : "timing.png",
+            "isUpload" : false,
+            "active" : true,
+            "id" : 4,
+            "answers" : [ 
+                {
+                    "content" : "Hài lòng.",
+                    "content_en" : "Fast",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Chấp nhận được.",
+                    "content_en" : "Acceptable",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Unacceptable, because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Unacceptable, because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Chờ đợi quá lâu.",
+                                "content_en" : "Too much waiting time",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Trả tiền thừa quá lâu",
+                                "content_en" : "Delayed checkout",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }, 
+        {
+            "name" : "Others",
+            "weightage" : 0.067,
+            "rankQuestion" : "Nhìn chung tất cả có khiến bạn hài lòng chứ?",
+            "rankQuestion_en" : "What is your general assessment?",
+            "iconName" : "others.png",
+            "isUpload" : false,
+            "active" : true,
+            "id" : 5,
+            "answers" : [ 
+                {
+                    "content" : "Hài lòng.",
+                    "content_en" : "That's good.",
+                    "value" : 3,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Chấp nhận được.",
+                    "content_en" : "Acceptable",
+                    "value" : 2,
+                    "subQuestion" : {
+                        "answers" : []
+                    }
+                }, 
+                {
+                    "content" : "Không thể chấp nhận được, vì...",
+                    "content_en" : "Unacceptable, because…",
+                    "value" : 1,
+                    "subQuestion" : {
+                        "content" : "Hãy đóng góp ý kiến của bạn để giúp chúng tôi cải thiện...",
+                        "content_en" : "Unacceptable, because…",
+                        "answers" : [ 
+                            {
+                                "content" : "Chưa thích không gian lắm.",
+                                "content_en" : "Space is not good.",
+                                "value" : 1
+                            }, 
+                            {
+                                "content" : "Cần có phòng hút thuốc lá riêng.",
+                                "content_en" : "Need smoking room.",
+                                "value" : 2
+                            }, 
+                            {
+                                "content" : "Thái độ con người ở đây chưa tốt.",
+                                "content_en" : "Attitude is not good.",
+                                "value" : 3
+                            }, 
+                            {
+                                "content" : "Ý kiến khác...",
+                                "content_en" : "Please share your comment!",
+                                "value" : 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "discounts" : {
+        "rank" : [ 
+            {
+                "nCorrect" : 0,
+                "percent" : 1,
+                "coin" : 10,
+                "expression" : "Rất tiếc, chúc bạn may mắn lần sau!",
+                "expression_en" : "Wish you luck next time!"
+            }, 
+            {
+                "nCorrect" : 1,
+                "percent" : 2,
+                "coin" : 20,
+                "expression" : "Ồ, khả năng phán đoán của bạn có tiềm năng đấy!",
+                "expression_en" : "Nice try, you are so good!"
+            }, 
+            {
+                "nCorrect" : 2,
+                "percent" : 3,
+                "coin" : 30,
+                "expression" : "Chúc mừng bạn đã đoán đúng được 2 tiêu chí.",
+                "expression_en" : "Congratulations, you got 2."
+            }, 
+            {
+                "nCorrect" : 3,
+                "percent" : 4,
+                "coin" : 40,
+                "expression" : "WAO, bạn đoán khá giỏi đấy.",
+                "expression_en" : "WAO, you are better than others."
+            }, 
+            {
+                "nCorrect" : 4,
+                "percent" : 5,
+                "coin" : 50,
+                "expression" : "THẬT TUYỆT VỜI, bạn có khả năng phán đoán hơn người.",
+                "expression_en" : "It's wonderful, you are better than others."
+            }, 
+            {
+                "nCorrect" : 5,
+                "percent" : 6,
+                "coin" : 60,
+                "expression" : "THẬT TUYỆT VỜI, bạn có khả năng phán đoán hơn người.",
+                "expression_en" : "It's wonderful, you are better than others."
+            }, 
+            {
+                "nCorrect" : 6,
+                "percent" : 7,
+                "coin" : 70,
+                "expression" : "THẬT TUYỆT VỜI, bạn có khả năng phán đoán hơn người.",
+                "expression_en" : "It's wonderful, you are better than others."
+            }
+        ],
+        "ces" : [ 
+            {
+                "nCorrect" : 0,
+                "percent" : 1,
+                "coin" : 10,
+                "expression" : "Rất tiếc, bạn không đoán đúng được tiêu chí nào!!!",
+                "expression_en" : "Sorry, you got 0."
+            }, 
+            {
+                "nCorrect" : 1,
+                "percent" : 2,
+                "coin" : 20,
+                "expression" : "Ồ, bạn chỉ đoán được 1 đáp án thôi, cố gắng lần sau nhé",
+                "expression_en" : "Nice try, you got 1."
+            }, 
+            {
+                "nCorrect" : 2,
+                "percent" : 3,
+                "coin" : 30,
+                "expression" : "Chúc mừng, bạn đoán khá giỏi đấy!",
+                "expression_en" : "Well done, you are so good."
+            }, 
+            {
+                "nCorrect" : 3,
+                "percent" : 4,
+                "coin" : 40,
+                "expression" : "Thật tuyệt vời, bạn đoán quá giỏi rồi!",
+                "expression_en" : "Excellent, You are the best."
+            }
+        ]
+    }
+}

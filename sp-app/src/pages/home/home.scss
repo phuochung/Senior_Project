@@ -1,0 +1,26 @@
+page-home {
+    .feedback-rating{
+        color: $color-orange;
+    }
+
+    .qr-scan-button{
+        transform: translate3d(0, 0, 0);
+        position: fixed;
+        bottom: 1.3em;
+        right: 1.3em;
+        background: #006837;
+        color: white;
+        border-radius: 50%;
+        width: 4em;
+        height: 4em;
+        text-align: center;
+        display: table;
+        padding: 10px;
+
+        .fas{
+            font-size: 1.8em;
+            vertical-align: middle;
+            display: table-cell;
+        }
+    }
+}

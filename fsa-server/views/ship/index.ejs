@@ -1,0 +1,91 @@
+<% include ../_functions/index %>
+    <div class="container ship-container">
+        <div class="row">
+            <div class="col s3 no-padding step step-01 center-align step-active">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Chọn món</p>
+            </div>
+            <div class="col s6 no-padding step step-02 center-align">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Xác nhận thông tin</p>
+            </div>
+            <div class="col s3 no-padding step step-03 center-align">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Nhận hàng</p>
+            </div>
+        </div>
+    </div>
+    <div class="container ship-container" id="main-content">
+        <div class="clear clearfix"></div>
+        <div class="row grey lighten-2">
+            <div class="col s12">
+                <h5 class="step-header">
+                    <%= provider.name%>
+                </h5>
+            </div>
+        </div>
+        <%
+    for (var i = 0; i < menu.length; i++){
+        let menuItem = menu[i];
+        let selectedItem = listDish.filter(function(item){return item.id==menuItem._id.toString();});
+        var quantity = 0;
+        if (selectedItem.length > 0){
+            quantity = selectedItem[0].numberDishs;
+        }
+
+        var itemThumbnail = "no-image.png";
+        if (menuItem.thumbnail !== undefined){
+            itemThumbnail = menuItem.thumbnail;
+        }
+    %>
+            <div class="row menu-item" data-item-id="<%=menuItem._id%>">
+                <div class="col s3">
+                    <img src="<%=imageFolder%><%=itemThumbnail%>" class="menu-item-thumbnail">
+                </div>
+                <div class="col s9 menu-item-selection">
+                    <div class="menu-item-information">
+                        <div class="menu-item-name">
+                            <h5>
+                                <%=menuItem.name%>
+                            </h5>
+                        </div>
+                        <div class="menu-item-price">
+                            <span class="price-amount">
+                                <%=(menuItem.price.getPriceByCurrency(provider.currency.code))%>
+                            </span>
+                        </div>
+                        <div class="menu-item-quantity">
+                            <input type='button' class="btn-quantity btn-decrease" value='-' />
+                            <input type="number" class="quantity-value center" value="<%-quantity%>" />
+                            <input type='button' class="btn-quantity btn-increase" value='+' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+                <div class="footer-clear"></div>
+                <div class="footer-button navigation-buttons center row">
+                    <div class="col s6 no-padding ship-button">
+                        <div class="btn-cancel bg-negative valign-wrapper center">
+                            <span>Hủy</span>
+                        </div>
+                    </div>
+                    <div class="col s6 no-padding ship-button">
+                        <div class="btn-checkout bg-positive valign-wrapper center">
+                            <span>Tiếp tục</span>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <script>
+        $(function () {
+            localStorage.shipAccessToken = encodeURIComponent('<%=accessToken%>');
+            localStorage.currency = '<%=provider.currency.code%>';
+        });
+    </script>
+
+    <script src="/public/js/ship-index.js"></script>

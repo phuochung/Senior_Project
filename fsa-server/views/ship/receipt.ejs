@@ -1,0 +1,99 @@
+<% include ../_functions/index %>
+    <div class="container ship-container">
+        <div class="row">
+            <div class="col s3 no-padding step step-01 center-align step-completed">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Chọn món</p>
+            </div>
+            <div class="col s6 no-padding step step-02 center-align step-active">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Xác nhận thông tin</p>
+            </div>
+            <div class="col s3 no-padding step step-03 center-align">
+                <div class="step-circle grey"></div>
+                <div class="cross-line grey"></div>
+                <p class="step-name">Nhận hàng</p>
+            </div>
+        </div>
+    </div>
+    <div class="container ship-container" id="main-content">
+        <div class="clear clearfix"></div>
+        <div class="row grey lighten-2">
+            <div class="col s12">
+                <h5 class="step-header">
+                    <%
+                var orderNumer = "";
+                if (ship.orderNumber !== undefined){
+                    orderNumber = `: ${ship.orderNumber}`;
+                }
+            %>
+                        Hóa đơn
+                        <%=orderNumber%>
+                </h5>
+            </div>
+        </div>
+        <% 
+        var totalItemCost = 0;  
+        for(var i = 0; i < ship.listDish.length; i++){
+            let item = ship.listDish[i];  
+            let itemCost = (item.price).getPriceByCurrencyWithoutFormat(provider.currency.code) * item.numberDishs;
+            totalItemCost += itemCost;     
+    %>
+            <div class="row menu-item">
+                <div class="col s8 item-details">
+                    <b class="item-name">
+                        <%=item.name%>
+                    </b> x
+                    <span class="item-quantity">
+                        <%=item.numberDishs%>
+                    </span>
+                </div>
+                <div class="col s4">
+                    <span class="item-price right">
+                        <span class="line-through">
+                            <%=(itemCost).formatCurrency(provider.currency.code)%>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <% 
+        }
+    %>
+                <div class="row summary">
+                    <div class="col s8 summary-titles total-price">
+                        <b class="summary-title">
+                            Tổng cộng (Chưa bao gồm phí giao hàng)
+                        </b>
+                    </div>
+                    <div class="col s4 total-price">
+                        <span class="item-price right color-highlight">
+                            <b>
+                                <%=totalItemCost%>
+                            </b>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="footer-button navigation-buttons center row">
+                    <div class="col s6 no-padding ship-button">
+                        <div class="btn-back bg-negative valign-wrapper center">
+                            <span>Quay lại</span>
+                        </div>
+                    </div>
+                    <div class="col s6 no-padding ship-button">
+                        <div class="btn-continue bg-positive valign-wrapper center">
+                            <span>Xác nhận</span>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <script>
+        $(function () {
+            localStorage.shipAccessToken = encodeURIComponent('<%=accessToken%>');
+            localStorage.currency = '<%=provider.currency.code%>';
+        });
+    </script>
+    <script src="/public/js/ship-receipt.js"></script>

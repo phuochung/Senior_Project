@@ -1,0 +1,12 @@
+<svg width="140" height="140" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>calendar</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-658 448)">
+<g id="calendar">
+<use xlink:href="#path0_fill" transform="translate(658 -448)" fill="#2A2B30"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 14L 0 4.94116L 14 4.94116L 14 14L 0 14ZM 14 0.823517L 14 4.11763L 0 4.11763L 0 0.823517L 3.5 0.823517L 3.5 2.79999L 4.08333 2.79999L 4.08333 0.823517L 9.91667 0.823517L 9.91667 2.79999L 10.5 2.79999L 10.5 0.823517L 14 0.823517ZM 3.29413 0.823529L 3.29413 0L 4.11766 0L 4.11766 0.823529L 3.29413 0.823529ZM 9.88232 0.823529L 9.88232 0L 10.7059 0L 10.7059 0.823529L 9.88232 0.823529Z"/>
+</defs>
+</svg>

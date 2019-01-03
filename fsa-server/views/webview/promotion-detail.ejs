@@ -1,0 +1,40 @@
+<% include ../_functions/index %>
+<% 
+let promotionImage = 'http://res.cloudinary.com/fsa-server/image/upload/promotion/promotion_default.jpg';
+if(promotion.imageName){
+promotionImage = 'http://res.cloudinary.com/fsa-server/image/upload/promotion/' + promotion.imageName;
+} 
+%>
+<header>
+    <div class="row margin-b-0 header">
+        <img class="promotion-cover" src="<%=promotionImage%>" />
+        <div class="col s8">
+            <h5 class="margin-b-0">
+                <%= provider.name%>
+            </h5>
+            <span>
+                <%=provider.address%>
+            </span>
+        </div>
+    </div>
+</header>
+
+<div class="row margin-b-0">
+    <div class="col s12">
+        <h5>
+            <%=promotion.title%>
+        </h5>
+    </div>
+</div>
+<div class="row margin-b-0">
+    <div class="color-highlight col s12">
+        <%=dateFrom%>
+        -
+        <%=dateTo%>
+    </div>
+    <div class="row margin-b-0">
+        <div class="col s12">
+            <%=promotion.description%>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+page-request-list{
+    .scroll-content{
+        margin-top: 56px;
+    }
+
+    .list-item{
+        margin: 5px 0px;
+        vertical-align: top;        
+
+        p{
+            overflow: hidden;
+            white-space: nowrap; 
+            text-overflow: ellipsis;
+        }
+
+        ion-col{
+            padding: 0 !important;
+        }
+
+        .item-information{
+            &>div{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .item-description{
+                font-size: .8em;
+            }
+        }
+
+        .input-wrapper{
+            display: block;
+        }
+
+        .item-status{
+            &.accepted{
+                background: darkgreen;
+            }
+
+            &.submitted{
+                background: $color-orange;
+            }
+
+            &.declined{
+                background: $color-red;
+            }
+
+            &.cancelled{
+                background: gray;
+            }
+            
+            &.unknown{
+                background: gray;
+            }
+
+            ion-icon{
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    .lazy-loading{
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.item-status{
+    padding: 3px 10px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    font-size: .7em;
+}
+
+.request-details{        
+    .request-details-section{
+        background: white;
+        margin: 16px 0;
+        padding: 0 16px;
+
+        .request-row{
+            padding: 8px 0;
+            border-top: .2px solid $color-gray-light;
+
+            &:first-child{
+                border: none !important;
+            }
+        }
+    }
+}
+
+.bottom-action-buttons{
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    .button-wrapper{
+        height: 50px;
+        display: table;
+    }
+
+    .bottom-button{
+        height: 100%;
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+    }
+}

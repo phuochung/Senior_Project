@@ -1,0 +1,21 @@
+.loading-modal{
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6;
+    text-align: center;
+    display: none;
+}
+
+.loading-modal .preloader-wrapper{
+    margin: auto;
+    vertical-align: middle;
+    top: 50%;
+}
+
+.no-scroll{
+    overflow: hidden !important;
+}

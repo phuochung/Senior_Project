@@ -1,0 +1,39 @@
+<ion-content>
+  <ion-grid class="text-center">
+    <ion-row>
+      <ion-col col-7></ion-col>
+      <ion-col col-5>
+        <ion-select (ionChange)="setLang($event)" [(ngModel)]="lang">
+          <ion-option value="vi">
+            Tiếng Việt
+          </ion-option>
+          <ion-option value="en">
+            English
+          </ion-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row padding>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-4>
+        <img src="assets/imgs/logo.png">
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding class="text-center">
+    <p *ngIf="errorMessage" class="errorMessage">{{ errorMessage }}</p>
+    <ion-row no-padding class="box-shadow bg-white login-input">
+      <ion-col no-padding>
+        <ion-input type="text" placeholder="{{'username' | translate}}" [(ngModel)]="user.username" name="username"></ion-input>
+        <ion-input type="password" placeholder="{{'password' | translate}}" [(ngModel)]="user.password" name="password"></ion-input>
+        <div class="btn bg-green-light color-white" (click)="login()" padding> {{'login' | translate}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <div id="register-div">
+    <a (click)="goToRegisterPage()">{{'register-account' | translate}}</a>
+  </div> -->
+</ion-content>

@@ -1,0 +1,54 @@
+<% include ../_functions/index %>
+<div class="container menu-container" id="main-content">
+    <div class="clear clearfix"></div>
+    <div class="section">
+        <% menu.forEach(function(menuItem){ %>
+        <div class="row menu-item">
+            <div class="col s3">
+                <%
+                        let itemThumbnail = 'http://res.cloudinary.com/fsa-server/image/upload/menu/no-image.png';
+                        if (menuItem.thumbnail){
+                            itemThumbnail = 'http://res.cloudinary.com/fsa-server/image/upload/menu/' + menuItem.thumbnail;
+                        }
+                        %>
+                <div style="background-image:url('<%=itemThumbnail%>')" class="menu-item-thumbnail">
+                </div>
+            </div>
+            <div class="col s9 menu-item-selection">
+                <div class="menu-item-information">
+                    <div class="menu-item-name">
+                        <h5>
+                            <%=menuItem.name%>
+                        </h5>
+                    </div>
+                    <div class="menu-item-price">
+                        <% if (provider.currency){ %>
+                        <span class="price-amount">
+                            <%=(menuItem.price.getPriceByCurrency(provider.currency.code))%>
+                        </span>
+                        <% }; %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% }); %>
+
+        <div id="pager">
+            <a href="<%=nextUrl%>" class='next-selector'></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+
+        $('.gift-container .section').jscroll({
+            loadingHtml: '<img class="image-jscroll-loading" src="/public/img/loading.gif" alt="Loading" />',
+            autoTriggerUntil: 1,
+            nextSelector: 'a.next-selector:last',
+            contentSelector: '.gift-container .section'
+        });
+
+    });
+</script>

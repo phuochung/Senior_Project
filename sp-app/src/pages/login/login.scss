@@ -1,0 +1,20 @@
+ion-row.login-input {
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+.errorMessage {
+    color: red;
+}
+
+#register-div {
+    float: right;
+    padding: 20px;
+}
+
+page-login {
+    ion-select {
+        max-width: 100%;
+        background: #fafbfc;
+    }
+}

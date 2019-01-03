@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{'register' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="text-center">
+    <ion-row padding>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-4>
+        <img src="assets/imgs/logo.png">
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-content>
+    <!-- <div class="provider-background full-thumbnail">
+      <label>Hình ảnh</label>
+      <div class="file-wrapper" [style.background-image]="thumbnail">
+        <label id="upload-thumnail" class="upload-area" for="thumnail"></label>
+        <input type="file" id="thumnail" (change)="fileChange($event)">
+      </div>
+    </div> -->
+    <form [formGroup]="registerForm">
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'username2' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="username" placeholder="{{ 'username2' | translate}}" [(ngModel)]="provider.username"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.username.errors && (registerForm.controls.username.dirty || submitAttempt)">
+          <span *ngIf="registerForm.controls.username.errors.required || registerForm.controls.username.errors.minlength || registerForm.controls.username.errors.maxlength">
+            {{ 'username-must-be-between-6-and-100-characters' | translate}}
+          </span>
+          <span *ngIf="registerForm.controls.username.errors['existingUsername']">
+              {{ 'username-is-existed' | translate}}</span>
+        </p>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'password' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="password" type="password" placeholder="{{ 'password' | translate}}" [(ngModel)]="provider.password"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.password.errors && (registerForm.controls.password.dirty || submitAttempt)">
+            <span *ngIf="registerForm.controls.password.errors.required || registerForm.controls.password.errors.minlength">
+              {{ 'password-must-have-6-characters-at-least' | translate}}
+            </span>
+          </p>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 're-password' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="confirmPassword" type="password" placeholder="{{ 're-password' | translate}}" [(ngModel)]="confirmPassword"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.confirmPassword.errors && (registerForm.controls.confirmPassword.dirty || submitAttempt)">
+          <span *ngIf="registerForm.controls.confirmPassword.errors.required">
+            {{ 'required-field' | translate}}
+          </span>
+          <span *ngIf="registerForm.controls.confirmPassword.errors['matchPassword']">
+            {{ 'password-and-re-password-not-match' | translate}}
+          </span>
+        </p>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'provider-name' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="name" placeholder="{{ 'provider-name' | translate}}" [(ngModel)]="provider.name"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.name.errors && (registerForm.controls.name.dirty || submitAttempt)">
+            <span *ngIf="registerForm.controls.name.errors.required">
+              {{ 'required-field' | translate}}
+            </span>
+          </p>
+        <ion-item>
+          <ion-label color="primary" stacked>Email
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="email" placeholder="Email" [(ngModel)]="provider.email"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.email.errors && (registerForm.controls.email.dirty || submitAttempt)">
+            <span *ngIf="registerForm.controls.email.errors.required">
+              {{ 'required-field' | translate}}
+            </span>
+            <span *ngIf="!registerForm.controls.email.errors.required && registerForm.controls.email.errors['invalidEmail']">
+              {{ 'invalid-email' | translate}}
+            </span>
+          </p>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'phone-number' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="tel" placeholder="{{ 'phone-number' | translate}}" [(ngModel)]="provider.tel"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.tel.errors && (registerForm.controls.tel.dirty || submitAttempt)">
+            <span *ngIf="registerForm.controls.tel.errors.required">
+              {{ 'required-field' | translate}}
+            </span>
+            <span *ngIf="!registerForm.controls.tel.errors.required && registerForm.controls.tel.errors['invalidPhoneNumber']">
+              {{ 'invalid-phone' | translate}}
+            </span>
+          </p>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'provider-address' | translate}}
+            <span class="required">*</span>
+          </ion-label>
+          <ion-input formControlName="address" placeholder="{{ 'provider-address' | translate}}" [(ngModel)]="provider.address"></ion-input>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="registerForm.controls.address.errors && (registerForm.controls.address.dirty || submitAttempt)">
+            <span *ngIf="registerForm.controls.address.errors.required">
+              {{ 'required-field' | translate}}
+            </span>
+          </p>
+      </ion-list>
+      <button ion-button full (click)="register()" class="btn-green" [disabled]="!registerForm.valid">{{ 'save' | translate}}</button>
+    </form>
+  </ion-content>
+</ion-content>

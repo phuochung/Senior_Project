@@ -1,0 +1,19 @@
+page-promotion-create {
+  ion-list {
+    margin-bottom: 60px !important;
+  }
+  ;
+  ion-list form {
+    position: initial !important;
+  }
+  ion-datetime.datetime-ios {
+    padding-left: 1em !important;
+  }
+  ion-select.select-ios {
+    padding-left: 1em !important;
+  }
+
+  button {
+    transform: translate3d(0, 0, 0);
+  }
+}

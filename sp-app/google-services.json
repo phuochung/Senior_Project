@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1053228293083",
+    "firebase_url": "https://fsapp-1e5b0.firebaseio.com",
+    "project_id": "fsapp-1e5b0",
+    "storage_bucket": "fsapp-1e5b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053228293083:android:d63e36b045f267ff",
+        "android_client_info": {
+          "package_name": "com.tp.spapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053228293083-7lgbl6h32uc2chfro8cg562mhkqrvcqi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtxCdyBqp0N4YD5QU37x_VM6zVSJdshPM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

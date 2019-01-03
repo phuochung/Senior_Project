@@ -1,0 +1,337 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style=
+"border-collapse: collapse;">
+  <tbody>
+    <tr>
+      <td align="center" valign="top" id="gmail-templateHeader" style=
+      "background-image: url(https://gallery.mailchimp.com/dbca78af5bd32813a9441f95e/images/38451c6d-14b9-4bd9-9bbc-c427cdc59091.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; border-top: 0px; border-bottom: 0px; padding-top: 160px; padding-bottom: 160px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width=
+      "100%" class="gmail-templateContainer" style=
+      "border-collapse: collapse; max-width: 600px;">
+          <tbody>
+            <tr>
+              <td valign="top" class="gmail-headerContainer" style=
+              "background: none 50% 50% / cover no-repeat transparent; border-top: 0px; border-bottom: 0px; padding-top: 0px; padding-bottom: 0px;">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" valign="top" id="gmail-templateBody" style=
+      "background: none 50% 50% / cover no-repeat rgb(255, 255, 255); border-top: 0px; border-bottom: 0px; padding-top: 3px; padding-bottom: 3px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width=
+      "100%" class="gmail-templateContainer" style=
+      "border-collapse: collapse; max-width: 600px;">
+          <tbody>
+            <tr>
+              <td valign="top" class="gmail-bodyContainer" style=
+              "background: none 50% 50% / cover no-repeat transparent; border-top: 0px; border-bottom: 0px; padding-top: 0px; padding-bottom: 0px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"
+              class="gmail-mcnTextBlock" style=
+              "min-width: 100%; border-collapse: collapse;">
+                  <tbody class="gmail-mcnTextBlockOuter">
+                    <tr>
+                      <td valign="top" class="gmail-mcnTextBlockInner" style=
+                      "padding-top: 9px;">
+                        <table align="left" border="0" cellpadding="0"
+                        cellspacing="0" style=
+                        "max-width: 100%; min-width: 100%; border-collapse: collapse;"
+                        width="100%" class="gmail-mcnTextContentContainer">
+                          <tbody>
+                            <tr>
+                              <td valign="top" class="gmail-mcnTextContent"
+                              style=
+                              "padding: 0px 18px 9px; word-break: break-word; color: rgb(128, 128, 128); font-family: Helvetica; font-size: 16px; line-height: 150%; text-align: left;">
+                              <h1 class="gmail-null" style=
+                              "text-align: center; display: block; margin: 0px; padding: 0px; color: rgb(34, 34, 34); font-family: Helvetica; font-size: 40px; font-style: normal; font-weight: bold; line-height: 150%; letter-spacing: normal;">
+                                Xác thực địa chỉ email 
+                                <br></h1>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnDividerBlock" style=
+                "min-width: 100%; border-collapse: collapse; table-layout: fixed;">
+                <tbody class="gmail-mcnDividerBlockOuter">
+                    <tr>
+                      <td class="gmail-mcnDividerBlockInner" style=
+                      "min-width: 100%; padding: 9px 18px 0px;">
+                        <table class="gmail-mcnDividerContent" border="0"
+                        cellpadding="0" cellspacing="0" width="100%" style=
+                        "min-width: 100%; border-collapse: collapse;">
+                          <tbody>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnDividerBlock" style=
+                "min-width: 100%; border-collapse: collapse; table-layout: fixed;">
+                <tbody class="gmail-mcnDividerBlockOuter">
+                    <tr>
+                      <td class="gmail-mcnDividerBlockInner" style=
+                      "min-width: 100%; padding: 9px 18px;">
+                        <table class="gmail-mcnDividerContent" border="0"
+                        cellpadding="0" cellspacing="0" width="100%" style=
+                        "min-width: 100%; border-top: 1px solid rgb(224, 224, 224); border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnTextBlock" style=
+                "min-width: 100%; border-collapse: collapse;">
+                  <tbody class="gmail-mcnTextBlockOuter">
+                    <tr>
+                      <td valign="top" class="gmail-mcnTextBlockInner" style=
+                      "padding-top: 9px;">
+                        <table align="left" border="0" cellpadding="0"
+                        cellspacing="0" style=
+                        "max-width: 100%; min-width: 100%; border-collapse: collapse;"
+                        width="100%" class="gmail-mcnTextContentContainer">
+                          <tbody>
+                            <tr>
+                              <td valign="top" class="gmail-mcnTextContent"
+                              style=
+                              "padding: 0px 18px 9px; word-break: break-word; line-height: 150%; text-align: left;">
+                              <p style=
+                              "margin: 10px 0px; padding: 0px; line-height: 150%; text-align: left;">
+                                <span style=
+                                "background-color: transparent;">Xin chân thành
+                                cám ơn quý khách đã tin tưởng sử dụng Hệ thống
+                                Trợ Lý Ảo tìm món ăn GonJoy cho công việc kinh
+                                doanh.</span></p>
+
+                                <p style=
+                                "margin: 10px 0px; padding: 0px; line-height: 150%; text-align: left;">
+                                <span style=
+                                "background-color: transparent;">GonJoy gửi đến
+                                quý khách email xác thực này, để chắc chắn rằng
+                                việc đăng ký đã hoàn tất, thông tin đăng ký của
+                                quý khách như sau:
+                                <br></span></p>
+
+                                <blockquote style=
+                                "margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+                                <br>
+                                  <b>Service Provider: #service-provider-name#
+                                  <br>
+                                  Tên đăng nhập: #service-provider-username#
+                                  <br></b>
+                                  <br>
+                                </blockquote>Trong trường hợp gặp vấn đề về
+                                đăng nhập, hãy sử dụng địa chỉ email này để
+                                khôi phục. GonJoy gửi đến quý khách bản hướng
+                                dẫn sử dụng để quý khách nắm rõ cách vận hành,
+                                trong trường hợp có bất kỳ thắc mắc nào, xin
+                                liên hệ với GonJoy theo các thông tin bên dưới.
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnButtonBlock" style=
+                "min-width: 100%; border-collapse: collapse;">
+                  <tbody class="gmail-mcnButtonBlockOuter">
+                    <tr>
+                      <td style="padding: 0px 18px 18px;" valign="top" align=
+                      "center" class="gmail-mcnButtonBlockInner">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                        class="gmail-mcnButtonContentContainer" style=
+                        "border-radius: 30px; background-color: rgb(185, 215, 56); border-collapse: separate;">
+                        <tbody>
+                            <tr>
+                              <td align="center" valign="middle" class=
+                              "gmail-mcnButtonContent" style=
+                              "font-family: Helvetica; font-size: 18px; padding: 18px;">
+                              <a class="gmail-mcnButton" title=
+                              "Hướng dẫn sử dụng" href=
+                              "https://docs.google.com/document/d/1fOvN5asULfqsEAH4qCh1EGEQrX-Suj4filJVKbjSNNg/edit"
+                                style=
+                                "font-weight: bold; letter-spacing: -0.5px; line-height: 100%; text-align: center; text-decoration: none; color: rgb(255, 255, 255); display: block;"
+                                target="_blank">Hướng dẫn sử dụng</a>
+                              </td>
+                            </tr>                            
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle" class="signature-gnj" >
+                        <img  src="https://gallery.mailchimp.com/dbca78af5bd32813a9441f95e/images/4ffdd855-77aa-4de2-a23c-cb94e13c3042.png" height="36" width="124"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnDividerBlock" style=
+                "min-width: 100%; border-collapse: collapse; table-layout: fixed;">
+                <tbody class="gmail-mcnDividerBlockOuter">
+                    <tr>
+                      <td class="gmail-mcnDividerBlockInner" style=
+                      "min-width: 100%; padding: 18px;">
+                        <table class="gmail-mcnDividerContent" border="0"
+                        cellpadding="0" cellspacing="0" width="100%" style=
+                        "min-width: 100%; border-top: 2px solid rgb(234, 234, 234); border-collapse: collapse;">
+                        <tbody>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnTextBlock" style=
+                "min-width: 100%; border-collapse: collapse;">
+                  <tbody class="gmail-mcnTextBlockOuter">
+                    <tr>
+                      <td valign="top" class="gmail-mcnTextBlockInner" style=
+                      "padding-top: 9px;">
+                        <table align="left" border="0" cellpadding="0"
+                        cellspacing="0" style=
+                        "max-width: 100%; min-width: 100%; border-collapse: collapse;"
+                        width="100%" class="gmail-mcnTextContentContainer">
+                          <tbody>
+                            <tr>
+                              <td valign="top" class="gmail-mcnTextContent"
+                              style=
+                              "padding: 0px 18px 9px; word-break: break-word; color: rgb(128, 128, 128); font-family: Helvetica; font-size: 16px; line-height: 150%; text-align: left;">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                class="gmail-mcnDividerBlock" style=
+                "min-width: 100%; border-collapse: collapse; table-layout: fixed;">
+                <tbody class="gmail-mcnDividerBlockOuter">
+                    <tr>
+                      <td class="gmail-mcnDividerBlockInner" style=
+                      "min-width: 100%; padding: 18px 18px 0px;">
+                        <table class="gmail-mcnDividerContent" border="0"
+                        cellpadding="0" cellspacing="0" width="100%" style=
+                        "min-width: 100%; border-collapse: collapse;">
+                          <tbody>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" valign="top" id="gmail-templateFooter" style=
+      "background: none 50% 50% / cover no-repeat rgb(87, 180, 197); border-top: 0px; border-bottom: 0px; padding-top: 1px; padding-bottom: 1px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width=
+      "100%" class="gmail-templateContainer" style=
+      "border-collapse: collapse; max-width: 600px;">
+          <tbody>
+            <tr>
+              <td valign="top" class="gmail-footerContainer" style=
+              "background: none 50% 50% / cover no-repeat transparent; border-top: 0px; border-bottom: 0px; padding-top: 0px; padding-bottom: 0px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"
+              class="gmail-mcnTextBlock" style=
+              "min-width: 100%; border-collapse: collapse;">
+                  <tbody class="gmail-mcnTextBlockOuter">
+                    <tr>
+                      <td valign="top" class="gmail-mcnTextBlockInner" style=
+                      "padding-top: 9px;">
+                        <table align="left" border="0" cellpadding="0"
+                        cellspacing="0" style=
+                        "max-width: 100%; min-width: 100%; border-collapse: collapse;"
+                        width="100%" class="gmail-mcnTextContentContainer">
+                          <tbody>
+                            <tr>
+                              <td valign="top" class="gmail-mcnTextContent"
+                              style=
+                              "padding: 0px 18px 9px; word-break: break-word; color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; line-height: 150%; text-align: center;">
+                              <div style="text-align: left;">
+                                  <span class="gmail-im">Khi quý anh/ chị có
+                                  bất kỳ thắc mắc nào, hãy liên hệ ngay với
+                                  chúng tôi để được hỗ trợ nhanh nhất:</span>
+                                </div>
+
+                                <ul>
+                                  <li style="text-align: left;">Hotline: 0903
+                                  533 725</li>
+
+                                  <li style="text-align: left;">Email:
+                                    <a href="mailto:contact@gonjoy.io" target=
+                                    "_blank">contact@gonjoy.io</a>
+                                  </li>
+
+                                  <li style="text-align: left;"><span class=
+                                  "gmail-im">Fanpage : <a href=
+                                  "https://www.facebook.com/gonjoybot" target=
+                                  "_blank">https://www.facebook<wbr>.com/gonjoybot</a></span></li>
+
+                                  <li style="text-align: left;"><span class=
+                                  "gmail-im">Website: <a href=
+                                  "http://gonjoy.io" target=
+                                  "_blank">http://gonjoy.io</a></span></li>
+                                </ul>
+
+                                <div style="text-align: left;">
+                                  <span class="gmail-im"> </span>
+                                </div><span class="gmail-im">Copyright © 2017
+                                GonJoy, All rights reserved.</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

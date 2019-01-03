@@ -1,0 +1,97 @@
+<% include ../_functions/index %>
+<div class="container ship-container">
+    <div class="row">
+        <div class="col s3 no-padding step step-01 center-align step-completed">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Chọn món</p>
+        </div>
+        <div class="col s6 no-padding step step-02 center-align step-active">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Xác nhận thông tin</p>
+        </div>
+        <div class="col s3 no-padding step step-03 center-align">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Nhận hàng</p>
+        </div>
+    </div>
+</div>
+<div class="container ship-container" id="main-content">
+    <div class="clear clearfix"></div>
+    <div class="row grey lighten-2">
+        <div class="col s12">
+            <h5 class="step-header">
+                Thông tin giao hàng
+            </h5>
+        </div>
+    </div>
+
+    <div class="input-form">
+        <input type="hidden" readonly value="<%=provider.name%>" id="input-field-from" />
+        <div class="row">
+            <div class="col s2 input-field-icon icon-user"></div>
+            <div class="col s10">
+                <input type="text" id="input-field-customer-name" value="<%=customerName%>" readonly />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2 input-field-icon icon-location"></div>
+            <div class="col s10">
+                <div class="row">
+                    <div class="col s12">
+                        <input type="text" id="input-field-to" placeholder="Địa chỉ giao đến" data-location="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2 input-field-icon icon-phone"></div>
+            <% 
+                            var telephone = "";
+                            if (ship.telephone !== undefined){
+                                telephone = ship.telephone;
+                            }
+                        %>
+            <div class="col s10">
+                <input type="tel" id="input-field-phone" placeholder="Số điện thoại liên hệ" value="<%=telephone%>" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2 input-field-icon icon-message"></div>
+            <% 
+                            var notes = "";
+                            if (ship.notes !== undefined){
+                                notes = ship.notes;
+                            }
+                        %>
+            <div class="col s10">
+                <textarea id="input-field-note" class="materialize-textarea" row="4" placeholder="Yêu cầu khác"><%=notes%></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-button navigation-buttons center row">
+        <div class="col s6 no-padding ship-button">
+            <div class="btn-back bg-negative valign-wrapper center">
+                <span>Quay lại</span>
+            </div>
+        </div>
+        <div class="col s6 no-padding ship-button">
+            <div class="btn-continue bg-positive valign-wrapper center">
+                <span>Tiếp tục</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        localStorage.shipAccessToken = encodeURIComponent('<%=accessToken%>');
+        localStorage.currency = '<%=provider.currency.code%>';
+        localStorage.exchangeRate = '<%=exchangeRate%>';
+    });
+</script>
+
+<script src="/public/js/ship-shippingInformation.js"></script>

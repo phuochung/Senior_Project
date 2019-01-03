@@ -1,0 +1,301 @@
+/* steps */
+.line-through{
+    /* text-decoration: line-through; */
+    color: #eb2000 !important;
+}
+
+.shipping-steps{
+    position: relative;
+}
+
+.cross-line{
+    width: 100%;
+    height: 1.3px;
+    position: absolute;
+    top: 10px;
+    z-index: -1000;                
+}
+
+.step{
+    position: relative;
+}
+
+.step-name{
+    margin: 0.3em 0;
+}
+
+.step-active  > .step-circle{
+    background-color: #ED2839 !important;
+}
+
+.step-completed  > .step-circle{
+    background-color: #ED2839 !important;
+    background-image: url(/public/img/check.svg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.step-active  > .step-name{
+    font-weight: bold;
+}
+
+.step-01 .cross-line{
+    width: 50%;
+    right: 0px;
+}
+
+.step-03 .cross-line{
+    width: 50%;
+    left: 0px;
+}
+
+.step-circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* body */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.step-header{
+    text-transform: uppercase;
+    color: #9FA2A4;
+}
+
+.ship-container{
+    padding-top: 10px;
+}
+
+.row{
+    margin-bottom: 0px;
+}
+
+.menu-item {
+    padding: 10px 0;
+    border-bottom: 1.3px solid #D8D8D8;
+}
+
+.menu-item-name h5{
+    font-size: 1.3rem;
+    margin: 0px;
+}
+
+.menu-item-price{
+    color: #ED2839;
+}
+
+.menu-item-thumbnail{   
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-item-selection{
+    position: relative;
+}
+
+.menu-item-button{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.menu-item-separator{
+    border-top: 0.85px solid #e0e0e0;
+}
+
+.menu-item-name{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+input.quantity-value{
+    width: 25px;
+    border: 1px solid #CBCBCB;
+    padding: 0 3px;
+    height: 25px;
+    margin: 0px;
+}
+
+.btn-quantity {
+    width: 25px;
+    height: 27px;
+    border: 1px solid #CBCBCB;
+    margin: 0px -5px;
+    background: transparent;
+
+}
+
+.ship-button{
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.ship-button *{
+    margin: auto;
+}
+
+.ship-button div{
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.color-highlight{
+    color: #F04957;
+}
+
+.bg-positive{
+    background-color: #F04957;
+}
+
+.bg-negative{
+    background-color: #DEDEDE;
+    color: #000000 !important;
+}
+
+textarea.materialize-textarea{
+    height: 6rem;
+}
+
+.estimation-field {
+    padding: 0px;
+    margin: 3px 0;
+    font-size: 0.9rem;
+}
+
+.estimation-value{
+    font-weight: bold;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field-icon{
+    width: 40px !important;
+    height: 40px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#input-field-to{
+    margin-bottom: 0;
+}
+
+.icon-user{    
+    background-image: url(/public/img/user.svg);
+}
+
+.icon-location{    
+    background-image: url(/public/img/location.svg);
+    background-size: 45%;
+}
+
+.icon-estimate{    
+    background-image: url(/public/img/estimate.svg);
+}
+
+.icon-phone{    
+    background-image: url(/public/img/phone.svg);
+}
+
+.icon-message{    
+    background-image: url(/public/img/message.svg);
+}
+
+.icon-done{    
+    background-image: url(/public/img/done.svg);
+}
+
+.btn-maps{
+    color: #06abfc !important;
+    cursor: pointer;
+}
+
+.btn-gps{
+    width: 100%;
+    display: none;
+}
+
+.btn-gps, .btn-gps:focus, .btn-gps:hover {
+    background: white;
+    padding: 0 10px;
+}
+
+.btn-gps * {
+    vertical-align: middle;
+    margin: 0 1px;
+}
+
+.btn-close-maps{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 2.2rem;
+    padding: 0 10px;
+}
+
+.footer-clear{    
+    height: 50px;
+}
+
+.footer-button{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+}
+
+.row.summary{
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.icon-done-wrapper{
+    margin-top: 100px;
+}
+
+.icon-large{
+    width: 100%;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.message-success{
+    color: #35A634;
+    font-size: 1.3rem;
+}
+
+.line-space{
+    margin-top: 15px;
+}
+
+.total-price{
+    font-size: 1.3rem;
+}
+
+.btn-close, .btn-close:hover{
+    background: #ffffff;
+    box-shadow: none;
+    color: black;
+    border: 1px solid #D6D6D6;
+}
+
+#gps-preview{
+    width: 100%;
+}

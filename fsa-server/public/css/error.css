@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+}
+
+body {    
+    height: 100%;
+    margin: 0 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: "#b71f29"; /* For browsers that do not support gradients */
+    background: linear-gradient(#ff4e40, #b71f29); /* Standard syntax (must be last) */
+    overflow-y: hidden;
+}
+
+.joy-logo{
+    height: 250px;
+    width: auto;
+}
+
+.message{
+    text-align: center;
+    color: white; 
+}

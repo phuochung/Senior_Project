@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span *ngIf="!isUpdating">{{ 'add-new' | translate }}</span>
+      <span *ngIf="isUpdating">{{ 'edit' | translate }}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="full-thumbnail">
+    <label>{{ 'photo' | translate }}</label>
+    <div class="file-wrapper" [style.background-image]="imageName">
+      <label id="upload-thumnail" class="upload-area" for="imageName"></label>
+      <input type="file" id="imageName" (change)="fileChange($event)">
+    </div>
+  </div>
+  <ion-list>
+    <form [formGroup]="promotionForm">
+      <ion-item>
+        <ion-label color="primary" stacked>{{ 'name' | translate }}</ion-label>
+        <ion-input formControlName="title" placeholder="{{ 'name' | translate }}" [(ngModel)]="item.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>{{ 'description' | translate }}</ion-label>
+        <ion-input formControlName="description" placeholder="{{ 'description' | translate }}" [(ngModel)]="item.description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>{{ 'isActive' | translate }}</ion-label>
+        <ion-checkbox formControlName="isActive" [(ngModel)]="item.isActive"></ion-checkbox>
+      </ion-item>
+      <ion-item-group>
+        <ion-item>
+          <ion-label color="primary" stacked>{{ 'schedule' | translate }}</ion-label>
+          <ion-datetime formControlName="dateFrom" [initialValue]="fromDateInitial" displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="item.dateFrom" max="2020-12-31" placeholder="{{ 'start-date' | translate }}"></ion-datetime>
+        </ion-item>        
+        <ion-item>
+          <ion-label color="primary" stacked></ion-label>
+          <ion-datetime formControlName="dateTo" [initialValue]="toDateInitial" displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="item.dateTo" [min]="item.dateFrom" max="2020-12-31"
+            placeholder="{{ 'end-date' | translate }}"></ion-datetime>
+        </ion-item>
+        <p class="field-error" ion-item *ngIf="!promotionForm.controls.dateTo.valid  && (promotionForm['controls'].dateTo.dirty || submitAttempt)">
+          <span>{{ 'end-date-must-not-less-than-begin-date' | translate }}</span>
+        </p>
+      </ion-item-group>
+      <button ion-button (click)="addOrUpdate()" [disabled]="!promotionForm.valid" class="btn btn-small btn-green btn-60p fixed-bottom-left">{{ 'save' | translate }}</button>
+      <button *ngIf="!isUpdating" ion-button (click)="cancel()" class="btn btn-small btn-orange btn-40p fixed-bottom-right">{{ 'cancel' | translate }}</button>
+      <button *ngIf="isUpdating" ion-button (click)="delete()" class="btn btn-small btn-red btn-40p fixed-bottom-right">{{ 'delete' | translate }}</button>
+    </form>
+  </ion-list>
+
+  <div class="lazy-loading">
+    <h4 *ngIf="isLoading">{{ 'loading' | translate }}...</h4>
+  </div>
+</ion-content>

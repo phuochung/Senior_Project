@@ -1,0 +1,36 @@
+body {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.promotion-cover{
+  width: 100%;
+  height: auto;
+}
+
+.color-highlight{  
+  color: #ED2839;
+}
+
+.color-gray{
+  color: gray;
+}
+
+.header{  
+  border-bottom: 1.3px solid #D8D8D8;
+  padding-bottom: 10px;
+}
+
+.place-address *{
+  vertical-align: middle;
+}
+
+.btn-buy, .btn-buy:hover{
+  color: white;
+  background: #F04957;
+  padding: 0 10px;
+}
+
+.material-icons{
+  font-size: 1.3rem;
+}

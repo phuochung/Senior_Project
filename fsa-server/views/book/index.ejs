@@ -1,0 +1,66 @@
+<div class="container book-container" id="main-content">
+    <div class="row">
+        <div class="col s12 center">
+            <h5>
+                <%=providerName%>
+            </h5>
+        </div>
+    </div>
+    <div class="input-form">
+        <div class="row">
+            <div class="col s12 date-selection">
+                <div class="col s2 input-field-icon icon-calendar"></div>
+                <div class="input-field col s10">
+                    <input type="text" class="datepicker" id="book-date" name="book-date" data-error="Vui lòng cho chúng tối biết bạn đặt bàn vào ngày nào">
+                    <label for="book-date">Ngày đặt bàn</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="col s2 input-field-icon icon-clock"></div>
+                <div class="input-field col s10">
+                    <input type="text" class="timepicker" id="book-time" name="book-time" data-error="Vui lòng cho chúng tối biết bạn đặt bàn vào giờ nào">
+                    <label for="book-time">Giờ đặt bàn</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="col s2 input-field-icon icon-people"></div>
+                <div class="input-field col s10">
+                    <input type="number" class="validate" id="book-size" name="book-size" data-error="Vui lòng cho chúng tối biết bạn đặt bàn cho bao nhiêu người">
+                    <label for="book-size">Số người</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="col s2 input-field-icon icon-message"></div>
+                <div class="col s10 input-field">
+                    <textarea id="book-note" class="materialize-textarea"></textarea>
+                    <label for="book-note">Yêu cầu khác</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer-buttons navigation-buttons center row">
+    <div class="col s6 no-padding footer-button">
+        <div class="btn-cancel bg-negative valign-wrapper center">
+            <span>Hủy</span>
+        </div>
+    </div>
+    <div class="col s6 no-padding footer-button">
+        <div class="btn-book bg-positive valign-wrapper center">
+            <span>Đặt bàn</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        localStorage.providerActionToken = encodeURIComponent('<%=actionToken%>')
+    });
+</script>

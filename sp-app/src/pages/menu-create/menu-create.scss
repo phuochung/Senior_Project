@@ -1,0 +1,94 @@
+page-menu-create {
+  .page-container {
+    padding: 0 2rem;
+  }
+  .info-label {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .info-value {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .item-block {
+    padding-right: 16px;
+  }
+  .menu-thumbnail {
+    background: #fff;
+    padding-top: 12px;
+  }
+  .menu-thumbnail label {
+    margin: 0 16px;
+    color: #488aff;
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+  }
+  .file-wrapper {
+    width: 100%;
+    height: 10em;
+    position: relative;
+    overflow: hidden;
+    background-color: #ccc; // background-image: url('/assets/imgs/no-image-menu.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+  }
+  .file-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .file-wrapper::after {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+    content: '\f382';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    pointer-events: none;
+  }
+  ion-item-group {
+    background: #fff;
+    .text-input {
+      padding: 0 1em;
+    }
+  }
+  .category-label {
+    background: #fff;
+    margin: 0;
+    padding: 10px 16px;
+    color: #488aff;
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+  }
+  .search-div {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    display: none;
+    .item-inner {
+      padding-right: 0;
+    }
+    .search-action {
+      padding: 0 8px;
+      float: right;
+    }
+    .search-result {
+      width: 100%;
+      height: 500px;
+      overflow-y: scroll;
+    }
+  }
+  .hint {
+    font-size: 13px;
+  }
+}

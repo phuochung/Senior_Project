@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'refuse-delivery' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div class="decline-reason" padding>
+    <h6>{{ 'are-you-sure-you-want-to-refuse-this-delivery' | translate }}
+      <br />{{ 'please-leave-the-reason-for-your-customer' | translate }}:</h6>
+    <ion-textarea [(ngModel)]="item.reasonRefuse" [disabled]="!isSubmitted(item)" placeholder="{{ 'reason' | translate }}..."></ion-textarea>
+  </div>
+
+  <div class="clear-footer"></div>
+  <ion-row class="bottom-action-buttons text-center" no-padding *ngIf="isSubmitted(item)">
+    <ion-col col-6 no-padding class="button-wrapper bg-green-light" (click)="doDecline(item)">
+      <div class="bottom-button">
+          {{ 'refuse' | translate }}
+      </div>
+    </ion-col>
+
+    <ion-col col-6 no-padding class="button-wrapper bg-red" (click)="goBack()">
+      <div class="bottom-button">
+          {{ 'cancel' | translate }}
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="bottom-action-buttons text-center" no-padding *ngIf="!isSubmitted(item)">
+    <ion-col col-12 no-padding class="button-wrapper bg-red" (click)="goBack()">
+      <div class="bottom-button">
+          {{ 'back' | translate }}
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

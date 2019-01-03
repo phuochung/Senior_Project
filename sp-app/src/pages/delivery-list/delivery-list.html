@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-segment [(ngModel)]="statusFilter" color="primary" (ionChange)="doFilter()">
+    <ion-segment-button value="all">
+      {{ 'all' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="accepted">
+        {{ 'accepted-request' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="submitted">
+        {{ 'submitted-request' | translate }}
+    </ion-segment-button>
+  </ion-segment>
+  <div>
+    <ion-row *ngFor="let item of filteredItems" (click)="openDetails(item)" class="list-item box-shadow" padding>
+      <ion-col col-9 class="item-information">
+        <div class="customer-name">
+          <b>{{ item.customer.name }}</b>
+        </div>
+        <div class="customer-address item-description">
+          {{ item.address }}
+        </div>
+      </ion-col>
+      <ion-col col-3 class="item-information text-right">
+        <span class="item-status {{ getStatusAsString(item) }}">
+          <ion-icon name="{{getIconByStatus(item)}}"></ion-icon>
+          {{ getStatusAsString(item) }}
+        </span>
+      </ion-col>
+    </ion-row>
+    <div *ngIf="!isLoading && filteredItems.length == 0">
+      <p class="text-center">{{ 'no-data' | translate }}</p>
+    </div>
+  </div>
+  <div class="lazy-loading text-center">
+    <a *ngIf="currentPage < totalPage && !isLoading" (click)="loadMore()" class="bg-green-light" ion-button>
+        {{ 'load-more' | translate }}
+    </a>
+    <h4 *ngIf="isLoading">{{ 'loading' | translate }}...</h4>
+  </div>
+</ion-content>

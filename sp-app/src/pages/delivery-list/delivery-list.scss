@@ -1,0 +1,12 @@
+page-delivery-list {
+  background: #fff;
+  .decline-reason {
+    ion-textarea {
+      border: 1px solid #eee
+    }
+  }
+  .decline-action-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

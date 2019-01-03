@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'delivery-info' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="request-details">
+  <div class="request-details-section box-shadow">
+    <ion-row class="request-row">
+      <div>
+        {{ item.customer.name }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row">
+      <div>
+        {{ item.telephone }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row">
+      <div>
+        {{ item.address }}
+      </div>
+    </ion-row>
+    <ion-row class="request-row" *ngIf="item.notes !== ''">
+      <div>
+        {{ item.notes }}
+      </div>
+    </ion-row>
+  </div>
+  
+  <div *ngIf="item.listDish && item.listDish.length > 0"  class="request-details-section box-shadow">
+    <ion-row class="request-row" *ngFor="let deliveryItem of item.listDish">
+      <ion-col col-9>
+        {{deliveryItem.name}} x {{deliveryItem.numberDishs}}
+      </ion-col>
+      <ion-col col-3 class="text-right">        
+          {{ currencyHelper.getFormattedPrice(deliveryItem.price) }}
+      </ion-col>
+    </ion-row>
+    <ion-row class="request-row">
+      <ion-col col-9>
+          {{ 'delivery-charges' | translate }}:
+      </ion-col>
+      <ion-col col-3 class="text-right">        
+          {{ currencyHelper.getFormattedPrice(item.shippingCost) }}
+      </ion-col>
+    </ion-row>
+    <ion-row class="request-row">
+      <ion-col col-9>
+          {{ 'total' | translate }}:
+      </ion-col>
+      <ion-col col-3 class="text-right">        
+          {{ currencyHelper.getFormattedPrice(item.priceTotal) }}
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="clear-footer"></div>
+  <ion-row *ngIf="isSubmitted(item)"  class="bottom-action-buttons text-center" no-padding>
+    <ion-col col-6 no-padding class="button-wrapper bg-green-light" (click)="accept($event, item)">
+      <div class="bottom-button">
+          {{ 'accept' | translate }}
+      </div>
+    </ion-col>
+    <ion-col col-6 no-padding class="button-wrapper bg-red" (click)="decline($event, item)">
+      <div class="bottom-button" color="danger">
+          {{ 'refuse' | translate }}
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

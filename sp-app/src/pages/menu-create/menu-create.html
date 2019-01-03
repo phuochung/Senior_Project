@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <div *ngIf="isFood && act == 'add'"> {{ 'add-new' | translate }}</div>
+      <div *ngIf="isFood && act == 'update'"> {{ 'edit' | translate }}</div>
+      <div *ngIf="!isFood && act == 'add'">{{ 'add-new' | translate }}</div>
+      <div *ngIf="!isFood && act == 'update'">{{ 'edit' | translate }}</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="menu-thumbnail full-thumbnail">
+    <label>{{ 'photo' | translate }}</label>
+    <div class="file-wrapper" [style.background-image]="thumbnail">
+      <label id="upload-thumnail" class="upload-area" for="thumnail"></label>
+      <input type="file" id="thumnail" (change)="fileChange($event)">
+    </div>
+  </div>
+  <ion-list>
+    <form [formGroup]="menuForm">
+    <ion-item>
+      <ion-label color="primary" stacked>{{ 'name' | translate }}</ion-label>
+      <ion-input formControlName="name" placeholder="{{ 'name' | translate }}" [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+    <p class="field-error" ion-item *ngIf="menuForm['controls'].name.errors && (menuForm['controls'].name.dirty || submitAttempt)">
+        <span *ngIf="menuForm['controls'].name.errors.required || menuForm['controls'].name.errors.maxlength">
+          {{ 'menu-name-must-be-between-1-and-100-characters' | translate}}
+        </span>
+        <span *ngIf="menuForm['controls'].name.errors['existingMenuName']">
+            {{ 'menu-name-is-existed' | translate}}</span>
+      </p>
+    <ion-item>
+      <ion-label color="primary" stacked>{{ 'description' | translate }}</ion-label>
+      <ion-input formControlName="description" placeholder="{{ 'description' | translate }}" [(ngModel)]="item.description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>{{ 'price' | translate }}</ion-label>
+      <ion-input formControlName="price" type="text" currencyFormatter placeholder="{{ 'price' | translate }}" [(ngModel)]="price"></ion-input>
+    </ion-item>
+    <p class="field-error" ion-item *ngIf="!menuForm.controls.price.valid  && (menuForm['controls'].price.dirty || submitAttempt)">
+        <span>{{'value-must-be-higher-than' | translate}} 1,000</span>
+      </p>
+    <ion-item>
+      <button ion-button item-right (click)="addOrUpdate()" [disabled]="!menuForm.valid" class="btn btn-green btn-md">{{ 'save' | translate }}</button>
+      <button ion-button item-right (click)="remove(item._id)"[disabled]="!item._id" class="btn btn-red btn-md">{{ 'remove' | translate }}</button>
+    </ion-item>
+    </form>
+  </ion-list>
+  <div ion-item class="search-div" [ngStyle]="{'display': hiddenSearchEl}">
+    <div class="search-action">
+      <button ion-button (click)="hideSearchEl()" class="btn-green">
+        <i class="fas fa-check"></i>
+      </button>
+    </div>
+  </div>
+
+</ion-content>

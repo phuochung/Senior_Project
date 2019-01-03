@@ -1,0 +1,44 @@
+<div class="container ship-container">
+    <div class="row">
+        <div class="col s3 no-padding step step-01 center-align step-completed">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Chọn món</p>
+        </div>
+        <div class="col s6 no-padding step step-02 center-align step-completed">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Xác nhận thông tin</p>
+        </div>
+        <div class="col s3 no-padding step step-03 center-align step-completed">
+            <div class="step-circle grey"></div>
+            <div class="cross-line grey"></div>
+            <p class="step-name">Nhận hàng</p>
+        </div>
+    </div>
+</div>
+<div class="container ship-container" id="main-content">
+    <div class="clear clearfix"></div>
+    <div class="row grey lighten-2">
+        <div class="col s12">
+            <h5 class="step-header">
+                Đặt hàng thành công
+            </h5>
+        </div>
+    </div>
+    <div class="row icon-done-wrapper">
+        <div class="icon-done icon-large"></div>
+    </div>
+    <div class="row center line-space">
+        <div class="col s12">
+            <span class="message-success">Đơn hàng của bạn đã được gửi.</span><br />
+            Vui lòng đợi trong giây lát, chúng tôi sẽ liên hệ với bạn qua số điện thoại 
+            <b><%=ship.telephone%></b> hoặc Messenger của bạn để xác nhận đơn hàng. Cảm ơn!
+        </div>
+    </div>
+
+    <div class="row navigation-buttons center line-space">
+        <span class="btn btn-close">Đóng</span>
+    </div>
+</div>
+<script src="/public/js/ship-complete.js"></script>
